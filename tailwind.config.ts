@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        warning: '#f97316',
+        danger: '#ef4444',
+        success: '#10b981',
+        info: '#3b82f6',
+        traffic: {
+          red: '#ef4444',
+          amber: '#f59e0b',
+          green: '#10b981',
+          blue: '#0ea5e9',
+          cyan: '#22d3ee',
+          indigo: '#4f46e5',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +97,32 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-glow': {
+          '0%, 100%': { 
+            opacity: '1',
+            boxShadow: '0 0 20px rgba(34, 211, 238, 0.7)' 
+          },
+          '50%': { 
+            opacity: '0.7',
+            boxShadow: '0 0 30px rgba(34, 211, 238, 0.9)' 
+          },
+        },
+        'fadeIn': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        'slideUp': {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 2s infinite',
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'slide-up': 'slideUp 0.4s ease-out'
 			}
 		}
 	},
